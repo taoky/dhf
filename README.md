@@ -36,3 +36,14 @@ options:
 > python dhf.py stm
 ['ghc']
 ```
+
+## Alternative
+
+Install `dctrl-tools` and use `grep-aptavail` (thanks @billchenchina):
+
+```console
+> grep-aptavail -F Provides: libghc-containers-dev -s Package -n
+ghc
+> grep-aptavail -F Provides: libghc-unordered-containers-dev -s Package -n
+libghc-unordered-containers-dev
+```
