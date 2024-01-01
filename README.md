@@ -7,9 +7,9 @@ as it sounds like a recursive problem if it was written in Haskell.
 
 ## Usage
 
-### dhf.py
+Scripts does not require any dependencies.
 
-This script does not require any dependencies.
+### dhf.py
 
 ```console
 > python dhf.py --help
@@ -48,6 +48,27 @@ The Glasgow Haskell Compilation system
 > python dhf.py --dist sid text-builder-dev
 libghc-text-builder-dev-dev (0.3.3.2-1+b2 provides text-builder-dev 0.3.3.2-94185)
 edge of developments for "text-builder"
+```
+
+### makehtml.py
+
+This script generates HTML file with all Haskell packages in Debian.
+
+```console
+> python makehtml.py --help
+usage: dhf-makehtml [-h] [--dist DIST] [--arch ARCH] [--mirror MIRROR] [--update] [--clean] [output]
+
+positional arguments:
+  output           HTML output file path
+
+options:
+  -h, --help       show this help message and exit
+  --dist DIST      distribution to search in
+  --arch ARCH      architecture to search for
+  --mirror MIRROR  mirror to search in
+  --update         always download Packages.gz for current request
+  --clean          remove /tmp/dhf and other args are ignored
+> python makehtml.py output.html
 ```
 
 ## Alternative
